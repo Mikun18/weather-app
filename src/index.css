@@ -1,13 +1,193 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+    background-image: url('../public/sunset.jpg');
+    background-repeat: no-repeat;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+}
+
+html{
+    height: 100vh;
+}
+
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: tomato;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+.container{
+}
+
+.bg-img{
+    inset: 0;
+    object-fit: cover;
+    filter: blur(10px);
+    position: fixed;
+    z-index: -1;
+}
+
+.header{
+    text-align: right;
+}
+
+.sub-con{
+    display: flex;
+    align-items: flex-end;
+}
+
+.get-weather{
+    top: 0;
+    padding: 2%;
+
+    margin-right: 20%;
+    background-color: black;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+    backdrop-filter: blur(50px);
+}
+
+.location{
+    font-size: 30px;
+    padding: 20px 0;
+    color: tomato;
+}
+
+select{
+    background-color: black;
+    color: white;
+    padding: 15px;
+    width: 100%;
+    font-size: large;
+    border: none;
+}
+
+.select h2{
+    width: 90%;
+}
+
+option{
+    overflow-x: scroll;
+}
+
+.place{
+    padding: 30px 0;
+}
+
+.weather h3{
+    font-size: 25px;
+    padding: 20px 0;
+    color: tomato;
+}
+
+.weather-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+}
+
+.weather-showcase{
+    display: flex;
+    margin: 100px 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.weather-showcase h1{
+    font-size: 80px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.weather-showcase h2{
+    font-size: 50px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.weather-showcase p{
+    font-size: 13px;
+    text-align: center;
+}
+
+@media(max-width: 1216px){
+    .option{
+        font-size: 10px;
+    }
+
+    select{
+        font-size: medium;
+    }
+
+    .weather-showcase{
+        padding: 0 50px;
+    }
+}
+
+@media(max-width: 942px){
+    .get-weather{
+        margin-right: 0%;
+    }
+
+    .weather-showcase h1{
+        font-size: 50px;
+    }
+
+    .weather-showcase h2{
+        font-size: 30px;
+    }
+}
+
+@media(max-width: 640px){
+    .sub-con{
+        display: block;
+    }
+
+    .select{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+
+    .get-weather{
+        margin-right: 0;
+    }
+
+    select{
+        width: 100%;
+    }
+
+    .select-1{
+        margin: 0 10px;
+    }
+
+    .weather-card{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .weather-details{
+        padding: 25px 20px;
+    }
+
+    .weather-showcase{
+        justify-content: initial;
+        margin-top: 30px;
+    }
 }
